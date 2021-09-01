@@ -19,7 +19,7 @@ int bubble_sort_recursive(int arr[], int len)
                     arr[i+1] = temp;
                 }
             }
-    return bubble_sort(_recursive(arr,len-1);
+    return bubble_sort_recursive(arr,len-1);
     }
 }
 
