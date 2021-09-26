@@ -3,14 +3,14 @@
 
 struct queue
 {
-    int rare,front,top;
+    int rear,front,top;
     int size;
     int *arr;
 };
 
 int is_empty(struct queue *q)
 {
-    if(q -> rare == q -> front)
+    if(q -> rear == q -> front)
     {
         return 1;
     }
@@ -23,7 +23,7 @@ int is_empty(struct queue *q)
 
 int is_full(struct queue *q)
 {
-    if(q -> rare == (q -> size)- 1)
+    if(q -> rear == (q -> size)- 1)
     {
         return 1;
     }
@@ -43,8 +43,8 @@ void enqueue(struct queue *q,int val)
 
     else
     {
-        q->rare++;
-        q->arr[q -> rare] = val;
+        q->rear++;
+        q->arr[q -> rear] = val;
     }
 }
 
@@ -85,7 +85,7 @@ int main()
 {
     int n,element,ch,flag=1,i=0;
     struct queue *q = (struct queue *)malloc(sizeof(struct queue));
-    q -> front = q -> rare = -1;
+    q -> front = q -> rear = -1;
        
     while(flag)
     {
