@@ -3,7 +3,7 @@
 
 struct queue
 {
-    int rear,front,top;
+    int rear,front;
     int size;
     int *arr;
 };
